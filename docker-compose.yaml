@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  database:
+    image: "mysql:latest"
+    env_file:
+      - .env_file
+    container_name: "web3-mysql"
+    ports:
+      - 3307:3306
+    networks:
+      - web3network
+    volumes:
+      - web3-database:/var/lib/mysql
+  web3:
+    build: .
+    container_name: "web3"
+    networks:
+      - web3network
+    volumes:
+      - web3-api:/app
+volumes:
+  web3-api:
+  web3-database:
+networks:
+  web3network:
+    driver: bridge
