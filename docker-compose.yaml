@@ -17,3 +17,4 @@ services:
       - sis_network
 networks:
   sis_network:
+    driver: bridge
