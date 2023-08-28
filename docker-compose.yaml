@@ -5,7 +5,7 @@ services:
     image: "mysql:latest"
     env_file:
       - .env_file
-    container_name: "web3-mysql2"
+    container_name: "web3-mysql"
     ports:
       - 3307:3306
     networks:
