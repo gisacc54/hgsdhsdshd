@@ -9,12 +9,9 @@ services:
     ports:
       - 3307:3306
     networks:
-      - web2network
+      - web2networks
   web3:
     build: .
     container_name: "web3"
     networks:
-      - web2network
-networks:
-  web2network:
-    driver: bridge
+      - web2networks
