@@ -17,3 +17,4 @@ services:
       - web2network
 networks:
   web2network:
+    driver: bridge
