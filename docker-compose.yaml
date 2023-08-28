@@ -9,19 +9,11 @@ services:
     ports:
       - 3307:3306
     networks:
-      - web3network
-    volumes:
-      - web3-database:/var/lib/mysql
+      - web2network
   web3:
     build: .
     container_name: "web3"
     networks:
-      - web3network
-    volumes:
-      - web3-api:/app
-volumes:
-  web3-api:
-  web3-database:
+      - web2network
 networks:
-  web3network:
-    driver: bridge
+  web2network:
