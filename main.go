@@ -73,7 +73,7 @@ func main() {
 }
 
 func DB() *gorm.DB {
-	dsn := "root:root_password@tcp(mysql-container:3306)/mydb?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:root_password@tcp(sis-mysql-container:3306)/sis_system_setting_db?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		println("err")
