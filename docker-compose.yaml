@@ -9,9 +9,9 @@ services:
     ports:
       - 3307:3306
     networks:
-      - web2networks
+      - sis_network
   web3:
     build: .
     container_name: "web3"
     networks:
-      - web2networks
+      - sis_network
