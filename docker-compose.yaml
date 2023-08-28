@@ -15,3 +15,5 @@ services:
     container_name: "web3"
     networks:
       - sis_network
+networks:
+  sis_network:
